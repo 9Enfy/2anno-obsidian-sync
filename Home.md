@@ -1,0 +1,6 @@
+---
+share: true  
+--- 
+
+[[ALGORITMI-INDICE]]
+
