@@ -5,3 +5,4 @@ share: true
 -  **Complessità degli algoritmi**
 
 [[ALGORITMI-LEZIONE 3]]
+- Qualcosa lol
