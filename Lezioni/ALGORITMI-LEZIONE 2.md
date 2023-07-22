@@ -1,6 +1,3 @@
----
-share: true  
---- 
 [[ALGORITMI-INDICE]]
 
 Complessità : misura del tempo che ci mette un algoritmo a finire
@@ -47,8 +44,11 @@ IF A[i] == x
 	return true
 return false
 ```
+
 Non è importante come viene scritto, basta solo che sia comprensibile (per esempio al posto di == si potrebbe tranquillamente scrivere = , è pseudocodice)
+
 ___
+
 ### ANALISI ALGORITMO SCRITTO SOPRA
 - **Dimensione problema** (m): numero di elementi nell'array A
 - Quante volte viene eseguita l'istruzione "return false"?
@@ -56,12 +56,17 @@ ___
 - - Caso pegigore: 1 volta (sono stati analizzati tutti gli elementi di A)
 
 Il tempo di esecuzione di questo algoritmo varia a seconda dell'input.
+
 ___
+
 Siamo più interessati al caso pessimo (tempo massimo di esecuzione) {possiamo anche analizzare il caso migliore e il caso medio}.
 
 Dobbiamo analizzare il comportamento dell'algoritmo nel caso peggiore.
+
 ___
+
 ### ALGORITMO SEARCH Array
+
 - Nel caso migliore il numero di istruzioni eseguite è costante c (x si trova nel primo indice dell'array). Non dipende da m.
 - Nel caso peggiore il numero di istruzioni eseguite è <= cm+d
 - c = totale di istruzione (indicizzazione dell'array, i++, controllo dell'if...) (costante), poco importante perchè:
@@ -69,9 +74,13 @@ ___
 - - influisce poco sul tempo finale dell'algoritmo
 - m = totale di elementi dell'array
 - d = una costante
+
 ___
+
 ## ALGORITMO PRODOTTO TRA DUE MATRICI 
+
 Serve per far capire che è complicato determinare esattamente il valore delle costanti 
+
 ```pseudocodice linenos title:"Prodotto tra due matrici" collapse
 MULT (A,B)
 	for i <- 1 to ROWS(A)
@@ -81,16 +90,47 @@ MULT (A,B)
 				C[i][j] <- c[i][j] + A[i][n]*B[n][j]
 return C
 ```
+
 Perchè indicizziamo gli array da 1? Per convenzione faremo così per questo corso, tranne quando indicizziamo da 0.
-Guardare la videolezione (1:00:00) per spiegazione di numero totale di istruzioni per il prodotto tra 2 matrici.
+>Guardare la videolezione (1:00:00) per spiegazione di numero totale di istruzioni per il prodotto tra 2 matrici.
+
 Risultato = 5lmn + 4ln + 3n +4, dove lmn sono le dimensioni delle matrici
+
 ___
+
 ## NOTAZIONE ASINTOTICA
+
 A me interessa studiare le funzioni di complessità in termini di quanto crescono al crescere dell'input (sono inutili le costante e i termini di ordine inferiore)
 $f \in O(g)$
 f non cresce più velocemente di g (ignorando le costanti)
-$\exists n \exists  c \forall$
 
+Equazione rigorosa:
+>$\exists c \exists \bar{n} \forall _{n>\bar{n}} \space \space f(n) \le cg(n)$
+
+Traduzione equazione:
+> Abbiamo 2 funzioni, $f$ e $g$, il nostro obiettivo è far sì che $f$ stia sempre sotto a $g$ da un certo istante in poi. Per fare ciò dobbiamo trovare una costante c ( $\exists c$ ) da moltiplicare alla funzione $g$ per far "salire $g$ nel grafico.
+> Dobbiamo inoltre trovare un valore $\bar n$ di $f(n)$ che rappresenta il momento in cui la funzione $f$ sarà sempre sotto $c g(n)$. Prima di $\bar n$ $f(n)$ può essere superiore a $cg(n)$, **non** lo può essere dopo
+
+___
+
+$f \in \Omega(g)$
+> $\exists _{c>0} \exists \bar n \forall _{n>\bar n} \space \space f(n) \ge cg(n)$
+
+Traduzione:
+> Più o meno il contrario di O(n). Da un certo punto in poi $cg(n)$ sta sotto $f(n)$
+
+___
+
+ $f \in \theta (g) \nLeftrightarrow f \in O(g) \land f \in \Omega(g)$
+
+Esempio:
+> $2n^2+6n+4 \in \theta(4n^2+2n+2)$ ? SI
+> >$2n^2+6n+4 \le 4n^2+2n+2$ Risolvere per dimostrare O
+> 
+> >$2n^2+6n+4 \ge x(4n^2+2n+2)$ Trovare x in modo tale da risolvere la  disequazione. Dimostra $\theta$
+
+
+ 
 
 
 

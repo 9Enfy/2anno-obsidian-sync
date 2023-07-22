@@ -1,0 +1,1 @@
+Un input per ogni dimensione
