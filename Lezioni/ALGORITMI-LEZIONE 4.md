@@ -1,5 +1,6 @@
 ## RISULUZIONE DI [[Equazione di ricorrenza|EQUAZIONI DI RICORRENZA]]
 ___
+# AGGIUNGERE DEFINIZIONE INDUZIONE
 
 ## [[Equazione di ricorrenza_metodo di sostituzione | METODO DI SOSTITUZIONE]]
 $$\Upgamma(n) = 2 \Upgamma(\lfloor \frac{n}{2} \rfloor) +n $$
