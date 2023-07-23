@@ -107,6 +107,8 @@ Quando $3^i\Upgamma(\lfloor \frac{n}{4^i}\rfloor)$ è il caso base?
 >>
 >>$\le n^{\log_4{3}}+4n = O(n)$ 
 
+
+
  
 
 

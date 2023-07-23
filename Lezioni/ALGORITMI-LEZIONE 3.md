@@ -73,7 +73,7 @@ La ricerca binaria ha complessità $\log{n,}$, tuttavia da quel che è stato scr
 
 ___
 ## FATTORIALE DI UN NUMERO
-```pseudocodice lineos title:"Fattoriale" collapse
+```pseudocodice linenos title:"Fattoriale" collapse
 IF n == 0
 	return 1
 ELSE
