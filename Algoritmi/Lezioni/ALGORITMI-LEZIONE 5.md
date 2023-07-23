@@ -98,7 +98,7 @@ Risultato finale: $\theta(n\log{n})$
 
 Ogni volta che noi facciamo un lavoro lineare per dividere il problema in 2 parti (a patto che ognuna sia una frazione della precedente), la tecnica funziona
 ___
-## [[ALGORITMI DI ORDINAMENTO]]
+# [[ALGORITMI DI ORDINAMENTO]]
 INPUT: una sequenza ($a_1,a_2,...,a_n$) di oggetti su cui è definita una relazione di orginamento totale.
 - Totale: se prendo una coppia di oggetti, li so confrontare
 
@@ -107,14 +107,14 @@ INPUT: una sequenza ($a_1,a_2,...,a_n$) di oggetti su cui è definita una relazi
 OUTPUT: permutazione (o riordinamento) ($a_1^\prime,a_2^\prime,...,a_n^\prime$) di ($a_1,...,a_n$) tale che ($a_1^\prime \le a_2^\prime\le ... \le a_n^\prime$)
 
 
-### [[INSERTION SORT]]
+## [[INSERTION SORT]]
 Gli indici degli array che useremo da qui in avanti partiranno a 1, non da 0
 
 Abbiamo un array, teniamo a sinistra gli elementi già ordinati, prendiamo un nuovo elemento e lo inseriamo nel posto corretto nella parte già ordinata (la parte ordinata diventa più grande).
 Per fare questo salviamo questo elemento in una variabile temporanea (key) e spostiamo a destra tutti gli elementi già ordinati più grandi di key e, alla fine, mettiamo il valore di key nel posto vuoto formatosi. Ripetere questo procedimento per tutti gli elementi dell'array (tranne il primo)
 
 ```pseudocodice linenos title:"Insertion Sort" collapse
-Insertion_Sort(A)
+InsertionSort(A)
 for(j<-2 to length(A)) //j= indice del primo elemento non ancora ordinato
 	key = A[j]
 	i = j-1
